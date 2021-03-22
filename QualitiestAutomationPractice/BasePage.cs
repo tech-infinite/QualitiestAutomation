@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
+using SeleniumExtras.PageObjects;
 
 namespace QualitiestAutomationPractice
 {
-    class BasePage
+    public class BasePage
     {
         IWebDriver driver;
+
+        public const string ContactUsLocator = "contact-link";
+
 
         [SetUp]
         public void Initalize()
@@ -32,5 +36,6 @@ namespace QualitiestAutomationPractice
         {
             driver.Dispose();
         }
+
     }
 }
